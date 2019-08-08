@@ -1,0 +1,32 @@
+.backgroud {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  top: 4vh;
+  right: auto;
+  left: 4vh;
+  bottom: auto;
+  z-index: 5;
+  height: 10vh;
+}
+.copy {
+  position: absolute;
+  top: auto;
+  right: 40px;
+  left: auto;
+  bottom: 40px;
+  z-index: 5;
+  height: 2vh;
+}

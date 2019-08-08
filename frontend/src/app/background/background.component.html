@@ -1,0 +1,8 @@
+<img [src]="logo" alt="" class="logo" />
+<img @myInsertRemoveTrigger [src]="shibuya" alt="" class="backgroud" *ngIf="location === 'shibuya'" />
+<img @myInsertRemoveTrigger [src]="hongo" alt="" class="backgroud" *ngIf="location === 'hongo'" />
+<img @myInsertRemoveTrigger [src]="hachioji" alt="" class="backgroud" *ngIf="location === 'hachioji'" />
+<img [src]="copy" alt="" class="copy" />
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

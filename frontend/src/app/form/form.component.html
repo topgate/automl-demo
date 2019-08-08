@@ -1,0 +1,27 @@
+<main>
+  <div class="form">
+    <div class="role-container">
+      <ng-container *ngFor="let place of places; index as i">
+        <div class="role-selector" *ngIf="selectedSituation === i">
+          <span>CASE {{ caseNum(i) }}</span>
+          <span class="point">{{ place.city }}</span>
+          <span>東京都{{ place.city }} {{ place.station }}駅から{{ place.minutes }}分</span>
+        </div>
+      </ng-container>
+    </div>
+    <mat-form-field>
+      <mat-select [(value)]="selectedYear">
+        <mat-option *ngFor="let year of years" [value]="year.value"> {{ year.value }} 年後 </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="estimation" (click)="onClick($event)">土地価格を予想する →</button>
+  </div>
+  <div class="scroll-btn">
+    <button mat-fab color="primary" (click)="belowCase($event)">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+    <button mat-fab color="primary" (click)="nextCase($event)">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
+</main>

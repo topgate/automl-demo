@@ -1,0 +1,97 @@
+<main>
+  <div class="back-button">
+    <button mat-fab color="primary" (click)="onClickBack()">
+      <mat-icon>keyboard_backspace</mat-icon>
+    </button>
+  </div>
+  <div class="result-container" *ngIf="!isReload">
+    <div class="result-rail" id="resultRail">
+      <!-- n年後 -->
+      <div class="result-board">
+        <div class="role-selector">
+          <span>CASE {{ situation.caseNum }}</span>
+          <span class="point">{{ situation.city }}</span>
+          <span>東京都{{ situation.city }}{{ situation.station }} 駅から{{ situation.minutes }}分</span>
+        </div>
+
+        <div class="results">
+          <span class="years">{{ situation.year }}年後</span>
+          <p class="row">
+            <span class="money">{{ results.unspecified }}</span> 万円/坪
+          </p>
+        </div>
+      </div>
+
+      <!-- 土地の形 -->
+      <div class="result-board">
+        <div class="role-selector">
+          <span>CASE {{ situation.caseNum }}</span>
+          <span class="point">土地の形が</span>
+        </div>
+
+        <div class="results">
+          <p class="result-set">
+            <span class="label">長方形</span>
+            <span class="right">
+              <span class="money">{{ results.rectangle }}</span> 万円/坪
+            </span>
+          </p>
+
+          <p class="result-set">
+            <span class="label">正方形</span>
+            <span class="right">
+              <span class="money">{{ results.square }}</span> 万円/坪
+            </span>
+          </p>
+
+          <p class="result-set">
+            <span class="label">不定形</span>
+            <span class="right">
+              <span class="money">{{ results.malformed }}</span> 万円/坪
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 最寄りまでの時間 -->
+      <div class="result-board">
+        <div class="role-selector">
+          <span>CASE {{ situation.caseNum }}</span>
+          <span class="point">最寄り駅まで</span>
+        </div>
+
+        <div class="results">
+          <p class="result-set">
+            <span class="label">5分</span>
+            <span class="right">
+              <span class="money">{{ results.near }}</span> 万円/坪
+            </span>
+          </p>
+
+          <p class="result-set">
+            <span class="label">15分</span>
+            <span class="right">
+              <span class="money">{{ results.farAway }}</span> 万円/坪
+            </span>
+          </p>
+
+          <p class="result-set">
+            <span class="label">20分</span>
+            <span class="right">
+              <span class="money">{{ results.furtherAway }}</span> 万円/坪
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-btn">
+      <button mat-fab color="primary" (click)="onClickScrollLeft()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button mat-fab color="primary" (click)="onClickScrollRight()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</main>

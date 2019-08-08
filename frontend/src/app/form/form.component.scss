@@ -1,0 +1,84 @@
+mat-form-field,
+.estimation {
+  margin: 8px;
+  font-size: 3vmin;
+  height: 10vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+  align-items: center; /* 縦方向中央揃え */
+  -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+  justify-content: center; /* 横方向中央揃え */
+}
+
+.estimation {
+  padding: 24px;
+  width: 24vw;
+}
+
+mat-form-field {
+  padding: 0 16px 0 16px;
+  margin-right: 24px;
+  background: rgba(#fefefe, 0.7);
+  .mat-form-field-wrapper {
+    margin: auto;
+  }
+  width: 14vw;
+  text-align: center;
+}
+
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.role-selector {
+  color: #fefefe;
+}
+
+.point {
+  font-size: 12vh;
+}
+
+span {
+  display: block;
+  font-size: 4vh;
+  margin: 0;
+}
+
+.scroll-btn {
+  margin: 0;
+  bottom: 4vh;
+  left: 4vh;
+  position: fixed;
+  padding: 8px;
+  button {
+    height: 6vh;
+    width: 6vh;
+    display: block;
+  }
+  :first-child {
+    margin-bottom: 16px;
+  }
+}
+
+::ng-deep .mat-icon {
+  height: 4vh !important;
+  width: 4vh !important;
+  font-size: 4vh;
+  display: -webkit-flex !important;
+  display: flex !important;
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+  align-items: center; /* 縦方向中央揃え */
+  -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+  justify-content: center; /* 横方向中央揃え */
+}
+
+.role-container {
+  margin-right: 80px;
+  white-space: nowrap;
+  width: 30vw;
+}

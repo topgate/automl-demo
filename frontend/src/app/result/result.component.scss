@@ -1,0 +1,86 @@
+.role-selector {
+  color: #333;
+  margin-right: 80px;
+  .point {
+    font-size: 8vh;
+  }
+  span {
+    display: block;
+    font-size: 3vh;
+    margin: 0;
+  }
+}
+
+.result-board {
+  min-height: 50vh;
+  min-width: 50vh;
+  background: #fefefe;
+  padding: 2vh;
+  margin: 1vw;
+  position: relative;
+  display: inline-block;
+}
+
+.result-container {
+  width: 80vw;
+  top: 15vh;
+  left: 15vw;
+  position: relative;
+}
+
+.result-rail {
+  right: auto;
+  position: initial;
+  overflow-x: auto;
+  display: flex;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.results {
+  width: calc(100% - 48px);
+  position: absolute;
+  color: #333;
+  bottom: 8px;
+  font-size: 4vh;
+  .row {
+    margin: 0;
+  }
+  .money {
+    font-size: 14vh;
+  }
+}
+
+.scroll-btn {
+  margin: 0;
+  position: fixed;
+  padding-left: 40px;
+  button {
+    height: 6vh;
+    width: 6vh;
+    margin: 8px;
+  }
+  :first-child {
+    margin-bottom: 16px;
+  }
+}
+
+.result-set {
+  display: flex;
+  justify-content: space-between;
+  .label {
+    font-size: 5vh;
+  }
+  .money {
+    font-size: 6vh;
+  }
+}
+
+.back-button {
+  position: absolute;
+  top: 50vh;
+  button {
+    height: 6vh;
+    width: 6vh;
+  }
+}
